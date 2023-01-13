@@ -15,9 +15,9 @@ function Body() {
     // const timeLine = useColorModeValue('blue','#34ebde')
     // const githubButton = useColorModeValue('black', 'white')
     return (
-      <Center my={'10'}>
-        <VStack spacing={'100'}>
-        <HStack>
+      <Center pb={100} w = {'100%'} h={'100%'}>
+        <VStack >
+        <HStack height={window.innerHeight-50}>
         <Image
             borderRadius='full'
             boxSize='xs'
@@ -25,7 +25,7 @@ function Body() {
             alt='Nihal Rian Dias'
             />
             <Spacer></Spacer>
-            <VStack spacing={'10'} align={'flex-start'}>
+            <VStack spacing={'50'} align={'flex-start'}>
                 <VStack align={'flex-start'}>
                 <Heading size={'4xl'}>Nihal Rian Dias</Heading>
                 <Heading size='2xl'>
@@ -73,6 +73,8 @@ function Body() {
                 </VStack>
             
         </HStack>
+        <VStack spacing={200}>
+        
         <VStack spacing={10}>
         <Box>
         <Center mb={'10'}>
@@ -81,8 +83,10 @@ function Body() {
             </Heading>
         </Center>
         <Box   
-        boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+        boxShadow={colorMode === 'light' ? "dark-lg" : "dark-lg"}
         borderRadius="50px"
+        // border={colorMode === 'light' ? '4px' : 'none'}
+        // backgroundColor={colorMode === 'light' ? 'white' : 'dark-lg'}
         alignSelf={'center'}
         px={10} py={5}>
             <HStack>
@@ -97,23 +101,23 @@ function Body() {
                             Lee Stott
                             </Text>
                             <Text fontSize={'sm'} align={'center'} fontWeight={'semibold'} maxWidth={['500']}>
-                            Principal Cloud Advocate Manager, Microsoft
+                            Principal Cloud Advocate Manager <br/> Microsoft
                             </Text>
                 </VStack>
-            <Spacer></Spacer>
+            <Spacer/> <Spacer/><Spacer/>
             <VStack align={'flex-start'}>
-                <Text fontSize={'md'} fontStyle={'italic'} maxWidth={['500']}>
+                <Text fontSize={'md'}  fontWeight={'semibold'} maxWidth={['500']}>
                 "Nihal is a highly capable individual, able to tackle complex and demanding challenges.
                 His ability to think on his feet whilst working in high pressure situations made him a 
                 greatly valued member of the Microsoft Azure Health Bot, Microsoft Learn Module project 
                 development team.
                 </Text>
-                <Text fontSize={'md'} fontStyle={'italic'} maxWidth={['500']}>
+                <Text fontSize={'md'}  fontWeight={'semibold'} maxWidth={['500']}>
                 Nihal's activity was to lead the development of content for the Microsoft Learn Module 
                 and Learn Live Webinar. Nihal completed the work as a project within the Microsoft Learn 
                 Ambassadors Program, whilst studying for his degree.
                 </Text>
-                <Text fontSize={'md'} fontStyle={'italic'} maxWidth={['500']}>
+                <Text fontSize={'md'}  fontWeight={'semibold'} maxWidth={['500']}>
                 I have no hesitation in recommending 
                 him and wish him every success in his degree results."
                 </Text>
@@ -133,8 +137,9 @@ function Body() {
         <SimpleGrid columns={2} spacing={10}>
 
         <Box   
-        boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+        boxShadow={colorMode === 'light' ? "dark-lg": "dark-lg"}
         borderRadius="50px"
+        // border={colorMode === 'light' ? '2px' : 'none'}
         alignSelf={'center'}
         px={10} py={5}>
             <HStack>
@@ -154,7 +159,7 @@ function Body() {
                 </VStack>
             <Spacer></Spacer>
             <VStack align={'flex-start'}>
-                <Text fontSize={'md'} fontStyle={'italic'} maxWidth={['400']}>
+                <Text fontSize={'md'}  fontWeight={'semibold'} maxWidth={['400']}>
                 "Nihal is a dedicated, self motivated and hardworking individual. 
                 He worked for a project at a very native stage and has proven to 
                 be resourceful as an individual as well as in a team. 
@@ -173,7 +178,7 @@ function Body() {
         </Box>
 
         <Box   
-        boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+        boxShadow={colorMode === 'light' ? "dark-lg" : "dark-lg"}
         borderRadius="50px"
         alignSelf={'center'}
         px={10} py={5}>
@@ -195,7 +200,7 @@ function Body() {
                 </VStack>
             <Spacer></Spacer>
             <VStack align={'flex-start'}>
-                <Text fontSize={'md'} fontStyle={'italic'} maxWidth={['400']}>
+                <Text fontSize={'md'} fontWeight={'semibold'} maxWidth={['400']}>
                 "A passionate learner and a hardworking member. Has a meticulous work ethic 
                 and a systematic work plan. Was a great experience working with Nihal. 
                 All the best for your future endeavors!"
@@ -230,7 +235,7 @@ function Body() {
             <Spacer></Spacer>
             <VStack align={'flex-start'} spacing={6}>
             <Box   
-                boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+                boxShadow="dark-lg"
                 borderRadius="50px"
                 alignSelf={'center'}
                 mx={8}
@@ -247,7 +252,7 @@ function Body() {
                         </VStack>
                 </Box>
                 <Box   
-                boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+                boxShadow="dark-lg"
                 borderRadius="50px"
                 alignSelf={'center'}
                 mx={8}
@@ -266,7 +271,7 @@ function Body() {
                         </VStack>
                 </Box>
                 <Box   
-                boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+                boxShadow="dark-lg"
                 borderRadius="50px"
                 alignSelf={'center'}
                 mx={8}
@@ -307,7 +312,10 @@ function Body() {
                                 </ListItem>
                         </UnorderedList>
                         </Collapse>
-                        <Button size='sm' onClick={handleToggle} mt='1rem'>
+                        <Button size='sm'
+                        border={colorMode === 'light' ? '2px' : 'none'}
+                        backgroundColor={colorMode==='light'? 'transparent': 'dark-lg'}
+                        onClick={handleToggle} mt='1rem'>
                                     Show {show ? 'less' : 'more'}
                                 </Button>
                         </Text> 
@@ -318,7 +326,7 @@ function Body() {
                
       <Collapse in={showExp} animateOpacity>
       <Box   
-                boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+                boxShadow="dark-lg"
                 borderRadius="50px"
                 alignSelf={'center'}
                 mx={8}
@@ -339,7 +347,10 @@ function Body() {
                         </VStack>
                 </Box>
       </Collapse>
-                <Button alignSelf={'center'} onClick={handleToggleExp}>Show {showExp ? 'less' : 'more'}</Button>
+                <Button alignSelf={'center'}
+                border={colorMode === 'light' ? '2px' : 'none'}
+                backgroundColor={colorMode==='light'? 'transparent': 'dark-lg'}
+                 onClick={handleToggleExp}>Show {showExp ? 'less' : 'more'}</Button>
                 </VStack>
             
         </HStack>
@@ -389,7 +400,7 @@ function Body() {
             <Spacer></Spacer>
             <VStack align={'flex-start'} spacing={6}>
             <Box   
-                boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+                boxShadow="dark-lg"
                 borderRadius="50px"
                 alignSelf={'center'}
                 mx={8}
@@ -413,7 +424,7 @@ function Body() {
                         </VStack>
                 </Box>
                 <Box   
-                boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+                boxShadow="dark-lg"
                 borderRadius="50px"
                 alignSelf={'center'}
                 mx={8}
@@ -439,7 +450,7 @@ function Body() {
                         </VStack>
                 </Box>
                 <Box   
-                boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+                boxShadow="dark-lg"
                 borderRadius="50px"
                 alignSelf={'center'}
                 mx={8}
@@ -468,7 +479,7 @@ function Body() {
                
       <Collapse in={showExp} animateOpacity>
       <Box   
-                boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #dddddd" : "dark-lg"}
+                boxShadow="dark-lg"
                 borderRadius="50px"
                 alignSelf={'center'}
                 mx={8}
@@ -497,10 +508,18 @@ function Body() {
                         </VStack>
                 </Box>
       </Collapse>
-                <Button alignSelf={'center'} onClick={handleToggleExp}>Show {showExp ? 'less' : 'more'}</Button>
+                <Button 
+                alignSelf={'center'} 
+                onClick={handleToggleExp}
+                border={colorMode === 'light' ? '2px' : 'none'}
+                        backgroundColor={colorMode==='light'? 'transparent': 'dark-lg'}
+                >
+                    Show {showExp ? 'less' : 'more'}
+                </Button>
                 </VStack>
             
         </HStack>
+        </VStack>
         </VStack>
         </VStack>
       </Center>

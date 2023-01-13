@@ -10,8 +10,8 @@ function TopNav() {
       position={'sticky'}
       top={'0'}
       backdropFilter='blur(20px)'
-      bgColor={'transparent'}
-      boxShadow={colorMode === 'light' ? "1px 3px 5px 2px #f7f5f5" : "dark-lg"} 
+      bgColor={"dark-lg"}
+      boxShadow={colorMode === 'light' ? "none" : "dark-lg"} 
       // borderRadius="80px"
       >
         {/* <Text>Nihal</Text> */}
@@ -32,7 +32,7 @@ function TopNav() {
         >
           <MenuItem>
           <Button borderColor={colorMode==='light' ? 'black' : 'white'} leftIcon={<FaDownload />} variant='outline'>
-              Resume
+          <a href='/Nihal Rian Dias.pdf' download>Resume</a>   
             </Button>
           </MenuItem>
           <MenuItem><Link to="/">Home</Link></MenuItem>
