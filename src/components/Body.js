@@ -85,7 +85,8 @@ function Body() {
         <Box   
         boxShadow={colorMode === 'light' ? "dark-lg" : "dark-lg"}
         borderRadius="50px"
-        // border={colorMode === 'light' ? '4px' : 'none'}
+        // borderColor={'#7f7f7f'}
+        // border={colorMode === 'light' ? '2px' : 'none'}
         // backgroundColor={colorMode === 'light' ? 'white' : 'dark-lg'}
         alignSelf={'center'}
         px={10} py={5}>
