@@ -32,7 +32,7 @@ function TopNav() {
         >
           <MenuItem>
           <Button borderColor={colorMode==='light' ? 'black' : 'white'} leftIcon={<FaDownload />} variant='outline'>
-          <a href='/Nihal Rian Dias.pdf' download>Resume</a>   
+          <a href='/NihalRianDias.pdf' download>Resume</a>   
             </Button>
           </MenuItem>
           <MenuItem><Link to="/">Home</Link></MenuItem>

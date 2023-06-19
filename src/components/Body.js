@@ -83,11 +83,9 @@ function Body() {
             </Heading>
         </Center>
         <Box   
-        boxShadow={colorMode === 'light' ? "dark-lg" : "dark-lg"}
-        borderRadius="50px"
-        // borderColor={'#7f7f7f'}
-        // border={colorMode === 'light' ? '2px' : 'none'}
-        // backgroundColor={colorMode === 'light' ? 'white' : 'dark-lg'}
+        boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+        borderRadius="30px"
+        backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
         alignSelf={'center'}
         px={10} py={5}>
             <HStack>
@@ -138,9 +136,9 @@ function Body() {
         <SimpleGrid columns={2} spacing={10}>
 
         <Box   
-        boxShadow={colorMode === 'light' ? "dark-lg": "dark-lg"}
-        borderRadius="50px"
-        // border={colorMode === 'light' ? '2px' : 'none'}
+        boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+        borderRadius="30px"
+        backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
         alignSelf={'center'}
         px={10} py={5}>
             <HStack>
@@ -159,8 +157,8 @@ function Body() {
                             </Text>
                 </VStack>
             <Spacer></Spacer>
-            <VStack align={'flex-start'}>
-                <Text fontSize={'md'}  fontWeight={'semibold'} maxWidth={['400']}>
+            <VStack align={'start'}>
+                <Text fontSize={'md'} alignSelf={'start'} fontWeight={'semibold'} maxWidth={['400']}>
                 "Nihal is a dedicated, self motivated and hardworking individual. 
                 He worked for a project at a very native stage and has proven to 
                 be resourceful as an individual as well as in a team. 
@@ -179,8 +177,9 @@ function Body() {
         </Box>
 
         <Box   
-        boxShadow={colorMode === 'light' ? "dark-lg" : "dark-lg"}
-        borderRadius="50px"
+        boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+        borderRadius="30px"
+        backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
         alignSelf={'center'}
         px={10} py={5}>
             <HStack>
@@ -236,15 +235,34 @@ function Body() {
             <Spacer></Spacer>
             <VStack align={'flex-start'} spacing={6}>
             <Box   
-                boxShadow="dark-lg"
-                borderRadius="50px"
+                boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+                borderRadius="30px"
+                backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
+                alignSelf={'center'}
+                mx={8}
+                px={10} py={5}>
+                    <VStack align={'flex-start'} spacing={3}>
+                    <Heading size = 'lg'>Intern, Volvo Group</Heading>
+                        <Heading size={'md'} maxWidth={['400']} color={recOnLinkedin}>
+                        02/23 - 07/23
+                        </Heading>
+                        <Text fontSize={'md'} fontWeight={'semibold'} maxWidth={['500']}>
+                        At Volvo, I worked on the modernization of applications using ReactJS and .NET as well as their migration to Azure Red Hat OpenShift (ARO)
+                        </Text> 
+
+                        </VStack>
+                </Box>
+            <Box   
+                boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+                borderRadius="30px"
+                backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
                 alignSelf={'center'}
                 mx={8}
                 px={10} py={5}>
                     <VStack align={'flex-start'} spacing={3}>
                     <Heading size = 'lg'>SDE Intern, Groupot</Heading>
                         <Heading size={'md'} maxWidth={['400']} color={recOnLinkedin}>
-                        06/22 - Present
+                        06/22 - 12/22
                         </Heading>
                         <Text fontSize={'md'} fontWeight={'semibold'} maxWidth={['500']}>
                         As part of Groupot, I work on the full stack development of their software product
@@ -252,9 +270,11 @@ function Body() {
 
                         </VStack>
                 </Box>
+                <Collapse in={showExp} animateOpacity>
                 <Box   
-                boxShadow="dark-lg"
-                borderRadius="50px"
+                boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+                borderRadius="30px"
+                backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
                 alignSelf={'center'}
                 mx={8}
                 px={10} py={5}>
@@ -271,9 +291,11 @@ function Body() {
 
                         </VStack>
                 </Box>
+                
                 <Box   
-                boxShadow="dark-lg"
-                borderRadius="50px"
+                boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+                borderRadius="30px"
+                backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
                 alignSelf={'center'}
                 mx={8}
                 px={10} py={5}>
@@ -325,10 +347,11 @@ function Body() {
                 </Box>
                 
                
-      <Collapse in={showExp} animateOpacity>
+      
       <Box   
-                boxShadow="dark-lg"
-                borderRadius="50px"
+                boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+                borderRadius="30px"
+                backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
                 alignSelf={'center'}
                 mx={8}
                 mt={3}
@@ -349,8 +372,9 @@ function Body() {
                 </Box>
       </Collapse>
                 <Button alignSelf={'center'}
-                border={colorMode === 'light' ? '2px' : 'none'}
-                backgroundColor={colorMode==='light'? 'transparent': 'dark-lg'}
+                boxShadow={colorMode === 'light' && "inset -1px -1px 2px #bebebe, inset 1px 1px 2px #ffffff"}
+                borderRadius="10px"
+                backgroundColor={colorMode === 'light' ? 'white' : 'dark-lg'}
                  onClick={handleToggleExp}>Show {showExp ? 'less' : 'more'}</Button>
                 </VStack>
             
@@ -401,8 +425,9 @@ function Body() {
             <Spacer></Spacer>
             <VStack align={'flex-start'} spacing={6}>
             <Box   
-                boxShadow="dark-lg"
-                borderRadius="50px"
+                boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+                borderRadius="30px"
+                backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
                 alignSelf={'center'}
                 mx={8}
                 px={10} py={5}>
@@ -425,8 +450,9 @@ function Body() {
                         </VStack>
                 </Box>
                 <Box   
-                boxShadow="dark-lg"
-                borderRadius="50px"
+                boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+                borderRadius="30px"
+                backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
                 alignSelf={'center'}
                 mx={8}
                 px={10} py={5}>
@@ -450,9 +476,12 @@ function Body() {
 
                         </VStack>
                 </Box>
+                <Collapse in={showExp} animateOpacity>
+
                 <Box   
-                boxShadow="dark-lg"
-                borderRadius="50px"
+                boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+                borderRadius="30px"
+                backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
                 alignSelf={'center'}
                 mx={8}
                 px={10} py={5}>
@@ -478,10 +507,10 @@ function Body() {
                 </Box>
                 
                
-      <Collapse in={showExp} animateOpacity>
       <Box   
-                boxShadow="dark-lg"
-                borderRadius="50px"
+                boxShadow={colorMode === 'light' ? "inset -5px -5px 10px #bebebe, inset 5px 5px 10px #ffffff" : "dark-lg"}
+                borderRadius="30px"
+                backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
                 alignSelf={'center'}
                 mx={8}
                 mt={3}
@@ -512,8 +541,9 @@ function Body() {
                 <Button 
                 alignSelf={'center'} 
                 onClick={handleToggleExp}
-                border={colorMode === 'light' ? '2px' : 'none'}
-                        backgroundColor={colorMode==='light'? 'transparent': 'dark-lg'}
+                boxShadow={colorMode === 'light' ? "inset -1px -1px 2px #bebebe, inset 1px 1px 2px #ffffff" : "dark-lg"}
+        borderRadius="10px"
+        backgroundColor={colorMode === 'light' ? '#f0f0f0' : 'dark-lg'}
                 >
                     Show {showExp ? 'less' : 'more'}
                 </Button>

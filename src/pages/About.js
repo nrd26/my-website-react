@@ -168,24 +168,27 @@ function About() {
                 boxShadow="dark-lg"
                 borderRadius="50px"
                 alignSelf={'center'}
+                
                 mx={8}
                 px={10} py={5}>
                     <VStack align={'flex-start'} spacing={3}>
                     <Heading size = 'lg' maxWidth={['500']}>Microsoft Learn Student Ambassador - Beta</Heading>
                     <Heading size = 'md' maxWidth={['500']}>Microsoft Learn</Heading>
                         <Heading size={'md'} maxWidth={['400']} color={recOnLinkedin}>
-                        08/20 - Present
+                        08/20 - 05/23
                         </Heading>
                         <Text fontSize={'md'} maxWidth={['500']}>
+                           
+                            <Collapse in={showV1}>
                             <Text as={'i'} fontSize={'md'}>
                             Microsoft Learn Student Ambassadors are a global group of campus leaders who are 
                             eager to help fellow students, create robust tech communities and develop technical 
                             and career skills for the future.
                             </Text>
                             
-                            <br/><br/>
+                            <br/>
                             
-                            <Collapse in={showV1}>
+                            
                             <Text fontSize={'md'}  fontWeight={'semibold'} maxWidth={['500']}>
                             As a Microsoft Learn Student Ambassador, I have
                             <UnorderedList>
@@ -204,6 +207,7 @@ function About() {
                             </UnorderedList>
                             </Text>
                             </Collapse>
+                            
                         <Button size='sm' onClick={handleToggleV1}
                         border={colorMode === 'light' ? '2px' : 'none'}
                         backgroundColor={colorMode==='light'? 'transparent': 'dark-lg'}
@@ -219,22 +223,36 @@ function About() {
                 boxShadow="dark-lg"
                 borderRadius="50px"
                 alignSelf={'center'}
+                w={['400']}
                 mx={8}
                 px={10} py={5}>
                     <VStack align={'flex-start'} spacing={3}>
-                    <Heading size = 'lg' maxWidth={['500']}>Core Team Member</Heading>
-                    <Heading size = 'md' maxWidth={['500']}>Developer Student Clubs, MIT Manipal</Heading>
-                        <Heading size={'md'} maxWidth={['400']} color={recOnLinkedin}>
+                    <Heading size = 'lg' 
+                    w={['600']}
+                    // maxWidth={['500']}
+                    >Core Team Member</Heading>
+                    <Heading size = 'md' 
+                    // maxWidth={['500']}
+                    w={['600']}
+                    >Developer Student Clubs, MIT Manipal</Heading>
+                        <Heading size={'md'} 
+                        // maxWidth={['400']} 
+                        w={['400']}
+                        color={recOnLinkedin}>
                         10/20 - 05/21
                         </Heading>
-                        <Text fontSize={'md'} maxWidth={['500']}>
+                        <Text fontSize={'md'} 
+                        // maxWidth={['500']}
+                        w={['500']}
+                        >
+                            <Collapse in={showV2}>
                             <Text as='i' fontSize={'md'}>Google Developer Student Clubs (GDSC) are community 
                             groups for college and university students interested in Google developer technologies.
                             </Text>
                             
-                            <br/><br/>
+                            <br/>
 
-                            <Collapse in={showV2}>
+                            
                             <Text fontSize={'md'} fontWeight={'semibold'} maxWidth={['500']}>
                             As a part of DSC, I have
                             <UnorderedList>
@@ -272,15 +290,17 @@ function About() {
                         03/20
                         </Heading>
                         <Text fontSize={'md'} maxWidth={['500']}>
+                        <Collapse in={showV3}>
                             <Text as='i' fontSize={'md'}>Revels is Manipal Institute of 
                             Technology's annual national-level Sports and Cultural festival.
-                            </Text><br/><br/>
-                            <Collapse in={showV3}>
+                            </Text><br/>
+                            
                             <Text fontSize={'md'} fontWeight={'semibold'} maxWidth={['500']}>
                             At Revels, I was able to generate a sevenfold increase in participation to 
                            events of the Animania category through a dedicated and target-based marketing strategy.
                            </Text>
                             </Collapse>
+                           
                             <Button size='sm' 
                             border={colorMode === 'light' ? '2px' : 'none'}
                             backgroundColor={colorMode==='light'? 'transparent': 'dark-lg'}
@@ -306,11 +326,12 @@ function About() {
                         03/20
                         </Heading>
                         <Text fontSize={'md'} maxWidth={['500']}>
+                        <Collapse in={showV4}>
                         <Text as='i' fontSize={'sm'}>
                         IOSD is an innovative collective of like-minded folks making useful and enduring 
                         technology products
-                            </Text><br/>
-                            <Collapse in={showV4}><br/>
+                            </Text>
+                            <br/>
                             <Text fontSize={'md'} fontWeight={'semibold'} maxWidth={['500']}>
                             As a part of IOSD, I helped conduct an event that included talks from tech industry greats 
                             Miri Rodrigues (Head of Global Internships, Microsoft) and Tanay Pratap (Software Engineer, 
@@ -318,6 +339,7 @@ function About() {
                             regarding OpenCV, Object Detection and Linux during a technical ML workshop at the same.
                             </Text>
                             </Collapse>
+                            
                             <Button size='sm'
                             border={colorMode === 'light' ? '2px' : 'none'}
                             backgroundColor={colorMode==='light'? 'transparent': 'dark-lg'}
