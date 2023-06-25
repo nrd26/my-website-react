@@ -1,11 +1,34 @@
-import { Text, Flex, useColorMode, Button, Image, Spacer, Link, Stack } from "@chakra-ui/react"
+import { Text, Flex, useColorMode, Button, Image, Stack, Spacer, Link, useDisclosure, Modal, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, ModalOverlay  } from "@chakra-ui/react"
+import { useEffect } from "react";
 import { FaMoon, FaSun, FaDownload } from "react-icons/fa"
 import { Outlet } from "react-router-dom";
 
 function TopNav() {
     const { colorMode, toggleColorMode } = useColorMode();
+    useEffect(() => {
+      onOpen()
+     });
+
+   const { isOpen, onOpen} = useDisclosure()
     return (
       <>
+      <Modal size={'xl'} isCentered isOpen={isOpen}>
+        <ModalOverlay
+          bg='blackAlpha.300'
+          backdropFilter='blur(10px)'
+        />
+        <ModalContent>
+          <ModalHeader>Under Development</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text>This site is currently under development. Please click on 
+            the button below to be redirected to the previous version</Text>
+          </ModalBody>
+          <ModalFooter>
+            <Button onClick={()=>{window.location.replace("https://diasnihal-v1.netlify.app/");}}>Go to site</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
       <Flex
       position={'sticky'}
       top={'0'}
