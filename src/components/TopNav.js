@@ -31,7 +31,11 @@ function TopNav() {
           pt={[4, 4, 0, 0]}
         >
           <MenuItem>
-          <Button borderColor={colorMode==='light' ? 'black' : 'white'} leftIcon={<FaDownload />} variant='outline'>
+          <Button 
+          // borderColor={colorMode==='light' ? 'black' : 'white'} 
+          leftIcon={<FaDownload />} 
+          // variant='outline'
+          >
           <a href='/NihalRianDias.pdf' download>Resume</a>   
             </Button>
           </MenuItem>

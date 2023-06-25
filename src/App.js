@@ -10,11 +10,9 @@ import { Box, useColorMode } from '@chakra-ui/react';
 function App() {
   const { colorMode} = useColorMode();
   return (
-    <Box  bgGradient={colorMode === 'light' ?
-    //  'linear(to-r, #00b09b, #96c93d)'
-    'linear(to-r, #00C9FF, #92FE9D)'
-    // 'linear(to-r, #00c3ff, #ffff1c)'
-     : "none"}>
+    <Box  bgGradient={colorMode === 'light' &&
+    'linear(to-r, #00C9FF, #92FE9D)'}
+    >
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<TopNav />}>
