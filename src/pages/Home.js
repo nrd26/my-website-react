@@ -1,11 +1,17 @@
-import { Text, useColorMode, Button, Image, Spacer, Link, Center, Box, HStack, Heading, VStack, SimpleGrid, useColorModeValue, UnorderedList, ListItem, Collapse } from "@chakra-ui/react"
-import React from "react";
+import { Text, useColorMode, Button, Image, Spacer, Link, Center, Box, HStack, Heading, VStack, SimpleGrid, useColorModeValue, UnorderedList, ListItem, Collapse, ModalOverlay, useDisclosure, Modal, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from "@chakra-ui/react"
+import React, { useEffect } from "react";
 import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaPenSquare, FaMicrosoft } from "react-icons/fa"
 
 function Home() {
     const { colorMode } = useColorMode('dark');
     const recOnLinkedin = useColorModeValue('blue','#34ebde')
     const [show, setShow] = React.useState(false)
+
+    useEffect(() => {
+       onOpen()
+      });
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
     const handleToggle = () => setShow(!show)
     
@@ -16,6 +22,23 @@ function Home() {
     // const githubButton = useColorModeValue('black', 'white')
     return (
       <Center pb={100} w = {'100%'} h={'100%'}>
+        <Modal size={'xl'} isCentered isOpen={isOpen}>
+        <ModalOverlay
+          bg='blackAlpha.300'
+          backdropFilter='blur(10px)'
+        />
+        <ModalContent>
+          <ModalHeader>Under Development</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text>This site is currently under development. Please click on 
+            the button below to be redirected to the previous version</Text>
+          </ModalBody>
+          <ModalFooter>
+            <Button onClick={()=>{window.location.replace("https://diasnihal-v1.netlify.app/");}}>Go to site</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
         <VStack >
         <HStack height={window.innerHeight-50}>
         <Image
