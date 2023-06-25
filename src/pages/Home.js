@@ -11,7 +11,7 @@ function Home() {
        onOpen()
       });
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { isOpen, onOpen} = useDisclosure()
 
     const handleToggle = () => setShow(!show)
     
